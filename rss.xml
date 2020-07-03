@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Sutra Hsing</title>
+        <link>https://sutrahsing.github.io/</link>
+        <description>A Gopher Studying Distributed Relational Databases</description>
+        <generator>Hugo 0.66.0 https://gohugo.io/</generator>
+        
+            <language>zh-CN</language>
+        
+        
+            <managingEditor>sutrahsing@163.com (sutra hsing)</managingEditor>
+        
+        
+            <webMaster>sutrahsing@163.com (sutra hsing)</webMaster>
+        
+        
+            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+        
+        <lastBuildDate>Fri, 03 Jul 2020 22:08:47 &#43;0800</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://sutrahsing.github.io/rss.xml" />
+        
+        
+            <item>
+                <title>Never Truly Successsful</title>
+                <link>https://sutrahsing.github.io/posts/interest/never-truly-successsful/</link>
+                <guid isPermaLink="true">https://sutrahsing.github.io/posts/interest/never-truly-successsful/</guid>
+                <pubDate>Mon, 29 Jun 2020 21:12:12 &#43;0800</pubDate>
+                
+                    <author>sutrahsing@163.com (sutra hsing)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://sutrahsing.github.io/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://sutrahsing.github.io/posts/interest/">interest</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>现在就创建你的博客</title>
+                <link>https://sutrahsing.github.io/posts/study/build-your-blog/</link>
+                <guid isPermaLink="true">https://sutrahsing.github.io/posts/study/build-your-blog/</guid>
+                <pubDate>Sat, 27 Jun 2020 00:00:00 &#43;0000</pubDate>
+                
+                    <author>sutrahsing@163.com (sutra hsing)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;p&gt;你可能不止一次听人们说，应该建立一个自己的站点了。但是因为可能会涉及比较多维护工作，以及繁忙的工作而搁置下来。但是这不代表博客不重要。&lt;/p&gt;
+&lt;p&gt;Hugo宣称是建立网站最快的框架，由GO语言编写，可以立即生成静态网站。&lt;/p&gt;
+&lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Github账户&lt;/li&gt;
+&lt;li&gt;安装好的Hugo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;第一步-安装hugo&#34;&gt;第一步: 安装Hugo&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在MacOS上，可以使用包管理器&lt;code&gt;Homebrew&lt;/code&gt;来进行安装。也可以在Windows上安装和运行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;确认安装完成：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;第二步创建一个新的站点&#34;&gt;第二步：创建一个新的站点&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo new site quickstart
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;命令会在一个被命名为&lt;code&gt;quickstart&lt;/code&gt;的文件夹内创建一个新的Hugo站点。&lt;/p&gt;
+&lt;h2 id=&#34;第三步添加主题&#34;&gt;第三步：添加主题&lt;/h2&gt;
+&lt;p&gt;可以在 thems.gohugo.io 查看主题列表，这里使用&lt;a href=&#34;https://themes.gohugo.io/gohugo-theme-ananke/&#34;&gt;Ananke主题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;从Github下载主题并添加到站点主题文件夹内：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; quickstart
+git init
+git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将主题添加到站点的配置文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;theme = &amp;#34;ananke&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; config.toml
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;第四步加一些内容&#34;&gt;第四步：加一些内容&lt;/h2&gt;
+&lt;p&gt;可以手动创建一个内容文件（例如&lt;code&gt;content/&amp;lt;CATAGORY&amp;gt;/&amp;lt;FILE&amp;gt;.&amp;lt;FORMAT&amp;gt;&lt;/code&gt;）然后在里面添加元数据，或者也可以使用&lt;code&gt;new&lt;/code&gt;命令来自动创建一个文件，并且自动生成一些元数据，比如标题和日期：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo new posts/my-first-posts.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;随意地编辑这个内容文件，它像下面这样开头：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;My First Post&amp;quot;
+date: 2019-03-26T08:47:11+01:00
+draft: true
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;第五步-启动hugo服务&#34;&gt;第五步： 启动Hugo服务&lt;/h2&gt;
+&lt;p&gt;在使用drafts选项下启动Hugo：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo server -D
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;访问你的本地站点：http://localhost:1313/.
+随便地修改或者添加内容，只要刷新浏览器就可以立刻看到变化。&lt;/p&gt;
+&lt;h2 id=&#34;自定义主题&#34;&gt;自定义主题&lt;/h2&gt;
+&lt;p&gt;新站点看上去已经很不错了，但是还需要一点调整再发布到网上。&lt;/p&gt;
+&lt;h3 id=&#34;站点设置&#34;&gt;站点设置&lt;/h3&gt;
+&lt;p&gt;使用编辑器打开&lt;code&gt;config.toml&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;nx&#34;&gt;baseURL&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://example.org/&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;languageCode&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;en-us&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;My New Hugo Site&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;theme&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ananke&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;自行修改上面的&lt;code&gt;title&lt;/code&gt;。如果你已经有了一个域名，设置&lt;code&gt;baseURL&lt;/code&gt;。现在在本地部署运行服务还不需要这个值。&lt;/p&gt;
+&lt;h2 id=&#34;第七步build你的静态页面&#34;&gt;第七步：build你的静态页面&lt;/h2&gt;
+&lt;p&gt;很简单：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo -D
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;默认输出到&lt;code&gt;./public/&lt;/code&gt;目录（使用&lt;code&gt;-d&lt;/code&gt;/&lt;code&gt;--destination&lt;/code&gt;来改变输出位置，或者在配置文件&lt;code&gt;publicshdir&lt;/code&gt;设置）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;草稿（draft）不会被部署到站点，完成一篇post后，设置文章的头&lt;code&gt;draft: false&lt;/code&gt;来标记。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/rjy22WFcycTKDKNtrUbzqg&#34;&gt;是时候考虑搭建自己的站点了：Hugo 和 GitHub Pages 为你助力&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;hugo quick start&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://sutrahsing.github.io/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://sutrahsing.github.io/posts/study/">study</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/hugo/">hugo</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/blog/">blog</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/github/">github</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Filebeat怎么工作</title>
+                <link>https://sutrahsing.github.io/posts/study/how-filebeat-works/</link>
+                <guid isPermaLink="true">https://sutrahsing.github.io/posts/study/how-filebeat-works/</guid>
+                <pubDate>Mon, 22 Jun 2020 23:11:04 &#43;0800</pubDate>
+                
+                    <author>sutrahsing@163.com (sutra hsing)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;filebeat-overview&#34;&gt;Filebeat Overview&lt;/h2&gt;
+&lt;p&gt;Filebeat是用来转发和集中日志数据的轻量级传送程序。Filebeat监控你所指定的日志文件或者位置，收集日志事件，转发到Elasticsearch或者Logstash用来索引。&lt;/p&gt;
+&lt;p&gt;Filebeat的工作原理：Filebeat启动一个或多个输入，对你所指定的文件数据实施监控。Filebeat对每一个日志启动一个收集器。收集器将新的内容读为一条条日志，并将新的日志数据发送到libbeat，libbeat对事件进行聚集运算，发送聚集的数据到配置的输出。&lt;/p&gt;
+&lt;h2 id=&#34;how-filebeat-works&#34;&gt;How Filebeat Works&lt;/h2&gt;
+&lt;p&gt;Filebeat包含两个主要的组件：inputs和harvesters。两个组件合作跟踪文件新增，并将事件数据发送到指定的输出。&lt;/p&gt;
+&lt;h3 id=&#34;what-is-harvesters&#34;&gt;What is harvesters?&lt;/h3&gt;
+&lt;p&gt;一个harvester负责从一个单独的文件读入内容。havester从日志一条条地读入内容并发送到输出。收集器负责打开和关闭文件，意味着收集器运行的过程中持续使用文件描述符。如果文件在读取的过程中被重命名或删除，Filebeat会持续读入文件。一个负作用是磁盘的空间会预留到收集器关闭。默认情况下Filebeat保持文件打开直到close_inactive的消息送达。&lt;/p&gt;
+&lt;p&gt;关闭一个harvester有如下的重要性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件的处理服务已经关闭，如果文件删除的时候harvester仍在读文件，释放资源。&lt;/li&gt;
+&lt;li&gt;收集文件只会在scan_frequency过期后重启。&lt;/li&gt;
+&lt;li&gt;当harvester关闭，再文件移动或者删除，对文件的收集不再继续。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-is-input&#34;&gt;What is input?&lt;/h3&gt;
+&lt;p&gt;输入确保了管理收集器，并查找所有要读入的源。&lt;/p&gt;
+&lt;p&gt;如果输入类型是log，输入将会匹配配置的路径，找到所有对应的文件，并为每一个文件启动一个收集器。每个输入使用自己的Go routine运行。&lt;/p&gt;
+&lt;p&gt;下面例子配置Filebeat从所有匹配模式的文件收集日志：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;k&#34;&gt;filebeat.inputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;log&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;paths&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- /var/log/&lt;span class=&#34;cp&#34;&gt;*.log&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- /var/path2/&lt;span class=&#34;cp&#34;&gt;*.log&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Filebeat支持多个输入类型。每个输入类型可以多次定义。log类型的输入检查每个文件是否需要启动对应的收集器，是否已经有一个收集器在运行，或者文件是否可以被忽略。只有文件大小改变，新的日志行才会被收集。&lt;/p&gt;
+&lt;h3 id=&#34;how-does-filebeat-keep-the-state-of-files&#34;&gt;How does Filebeat keep the state of files?&lt;/h3&gt;
+&lt;p&gt;Filebeat维护每一个文件的状态，周期性的将注册文件的状态刷入磁盘。状态用来记录最近收集器读取的偏移量，确定所有的日志行都被发送。如果输出（如Logstash或者Kafka）无法到达，Filebeat追踪最后发送的日志行，当输出可以到达的时候会继续从文件读取。Filebeat运行的过程中，每个文件输入的状态信息在内存持续维护。Filebeat重启的时候，注册文件的数据会用于重建状态，Filebeat在最后记录的位置继续每个收集器的工作。&lt;/p&gt;
+&lt;p&gt;由于文件可能会被重命名或者移动，文件名和路径不足够确定一个文件。对于每一个文件，Filebeat存储唯一的标识符来检测是否曾经被收集过。&lt;/p&gt;
+&lt;p&gt;如果你的用例每天会创建大量的新文件，你可能发现注册文件会越来越大。See Registry file is too large for details about configuration options that you can set to resolve this issue.&lt;/p&gt;
+&lt;h3 id=&#34;how-does-filebeat-ensure-at-least-once-delivery&#34;&gt;How does Filebeat ensure at-least-once delivery?&lt;/h3&gt;
+&lt;p&gt;Filebeat确保事件发送到配置的输出至少一次没有数据丢失。这是由于Filebeat在注册文件存储每个事件的传送状态。&lt;/p&gt;
+&lt;p&gt;如果输出卡住，无法确认所有事件，Filebeat会持续发送事件直到输出确认收到事件。&lt;/p&gt;
+&lt;p&gt;如果Filebeat在发送事件的过程中关闭，不会在关闭前等待输出确认所有事件。所有发送了但是在Filebeat关闭前没有确认的事件会在Filebeat重新启动后再次发送。这确保了所有事件至少发送一次，但是可能重复发送事件。可以配置Filebeat在关闭前等待一段时间。&lt;/p&gt;
+&lt;p&gt;Filebeat至少发送一个保证的限制，包括log rotation和旧文件的删除。如果日志文件写到底盘，并且roration的速度比Filebeat处理得快，或者文件在输出获得之前被删除，数据可能会丢失。&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://sutrahsing.github.io/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://sutrahsing.github.io/posts/study/">study</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/elastic-stack/">Elastic Stack</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/beats/">Beats</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/metricbeat/">Metricbeat</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Metricbeat怎么工作</title>
+                <link>https://sutrahsing.github.io/posts/study/how-metricbeat-works/</link>
+                <guid isPermaLink="true">https://sutrahsing.github.io/posts/study/how-metricbeat-works/</guid>
+                <pubDate>Mon, 15 Jun 2020 00:00:00 &#43;0000</pubDate>
+                
+                    <author>sutrahsing@163.com (sutra hsing)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;p&gt;Metricbeat包括module和metricset。module定义从特定的服务收集数据的基本逻辑，比如从Redis，MySQL等。module有关于服务的细节，包括如何连接，采集频率，从何处收集数据。&lt;/p&gt;
+&lt;p&gt;每个module有一个或多个metricset。metricset是module抓取、整理数据的部分。每一个指标不是分别收集的，metricset可以通过一个请求从远端系统获得一组相关的指标。比如Redis module提供info metricset从Redis收集信息和统计数据，通过执行INFO命令并解析返回结果。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/06/26/ctRhioLVPZuIYbU.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;类似的，MySQL module提供一个status metricset来执行SHOW GLOBAL STATUS  的SQL语句。
+Metricbeat按照设置module的period值周期性地从主机系统收集数据。因为多个metricset的组合可以发送到同一个服务，metricbeat可以在任何时候重用连接。如果在配置里面timeout之间内不能连接到主机系统，返回一个错误。Metricbeat异步地发送事件，所以是否返回是不确定的。如果配置的输出无法访问，事件就会丢失。
+Metricbeat遇到错误的时候会向输出发送错误，所以无论是否失败，Metricbeat总会发送事件。这可以用来监控错误，查看调试信息来诊断问题。&lt;/p&gt;
+&lt;h2 id=&#34;event-结构&#34;&gt;Event 结构&lt;/h2&gt;
+&lt;p&gt;Metricbeat发送的每个事件有相同的结构。包含以下的字段：
+@timestamp：时间捕获的时间
+host.hostname：Beat运行的服务器主机名
+agent.type：给Beat定义的名字
+event.module：数据来源的module名
+event.dataset：数据来源的module名&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;{&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;#34;@timestamp&amp;#34;: &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;2016-06-22T22:05:53.291Z&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;#34;agent&amp;#34;: &lt;/span&gt;{&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;#34;type&amp;#34;: &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;metricbeat&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;}&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;#34;host&amp;#34;: &lt;/span&gt;{&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;#34;hostname&amp;#34;: &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;host.example.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;}&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;#34;event&amp;#34;: &lt;/span&gt;{&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;#34;dataset&amp;#34;: &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;system.process&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;#34;module&amp;#34;: &lt;/span&gt;process&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;}&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;.&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;.&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;.&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;&amp;#34;type&amp;#34;: &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;metricsets&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;}&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;wrong-event-结构&#34;&gt;Wrong Event 结构&lt;/h2&gt;
+&lt;p&gt;服务无法访问的时候Metricbeat发送错误事件。错误事件和基础事件的结构相同，再有一个包含错误字符串的错误字段，可以用来检查所有指标事件的错误。
+当Apache服务无法访问时候的错误事件&lt;/p&gt;
+&lt;h2 id=&#34;metricbeat的关键特性&#34;&gt;Metricbeat的关键特性&lt;/h2&gt;
+&lt;h3 id=&#34;metricbeat-错误事件&#34;&gt;Metricbeat 错误事件&lt;/h3&gt;
+&lt;p&gt;Metricbeat不只发送了指标。不能接受到指标的时候，它发送错误事件。错误事件不是一个简单的标记，而是从主机抓取舒适的过程中创建的字符串。这样不仅仅可以监控指标，在监控的过程中发生的错误也能观察到。&lt;/p&gt;
+&lt;p&gt;因为有全部的错误消息，可以快速地追踪错误。Metricbeat安装在主机本地，意味着你可以把本地的错误和其他问题迅速区分开，比如网络问题。
+每一个metricset都在一个预定义的时间段内获得，所以Metricbeat没能在一个时间段获得指标，可以推断在主机或者主机的连接上存在一些问题。
+抓取数据的时候不做聚合运算&lt;/p&gt;
+&lt;p&gt;Metricbeat不做像guage, sum, counter一样的聚合运算。Metricbeat发送从主机的输出获得的原数据。使用Elasticsearch的时候，所有原数据可以访问是一种优势，可以用于挖掘细节，数据可以随时再处理。这也减少了Metricbeat的复杂性。&lt;/p&gt;
+&lt;h3 id=&#34;不只发送数字&#34;&gt;不只发送数字&lt;/h3&gt;
+&lt;h3 id=&#34;一个事件多个指标&#34;&gt;一个事件多个指标&lt;/h3&gt;
+&lt;p&gt;每个事件可以包含多个指标。意味着可以发送一条请求给系统获得所有的指标，减少对主机系统的压力。如果直接发送指标到Elasticsearch作为输出，Elasticsearch可以直接以嵌套的JAON document的形式存储并查询指标。这使得发送指标数据到Elasticsearch变得非常高效。&lt;/p&gt;
+&lt;p&gt;因为所有的原事件数据都是可以访问的，Metricbeat或者Elasticsearch可以随后对数据做任意需要的变化。例如，如果需要以Metrics2.0格式存储数据，你可以把完整的事件拆分成多个metrics2.0事件。&lt;/p&gt;
+&lt;p&gt;每个指标的元信息存储在映射的模板里面。所有指标事件共有的元信息（比如主机和时间戳）都是事件结构的一部分，并且对于metricset的所有事件仅存储一次。&lt;/p&gt;
+&lt;p&gt;如果一个服务的一个指标看上去好像不存在，也因为在一个事件里有所有相关的指标而更容易查看。&lt;/p&gt;</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://sutrahsing.github.io/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://sutrahsing.github.io/posts/study/">study</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/elastic-stack/">Elastic Stack</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/beats/">Beats</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/metricbeat/">Metricbeat</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Elasticsearch介绍</title>
+                <link>https://sutrahsing.github.io/posts/study/elasticsearch-intro/</link>
+                <guid isPermaLink="true">https://sutrahsing.github.io/posts/study/elasticsearch-intro/</guid>
+                <pubDate>Mon, 13 Apr 2020 21:27:49 &#43;0800</pubDate>
+                
+                    <author>sutrahsing@163.com (sutra hsing)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+&lt;p&gt;Elasticsearch是Elastic Stack的核心部分，分布式的搜索和分析引擎。Logstash和Beats专注于收集，聚集和丰富数据，并将这些数据存储在Elasticsearch。Kibana允许交互地探索，可视化，分享数据成果，管理并监控整个技术栈。&lt;/p&gt;
+&lt;p&gt;Elasticsearch可以对各类数据进行实时搜索和分析。结构化的和非结构化的文本，数字型数据或者地理数据，Elasticsearch都可以高效地存储和索引，以便快速搜索。通过简单地操作检索数据和聚集信息，在此基础上发现数据中的趋势和模式。随着数据和查询量的增长，Elasticsearch天然的分布式特性允许无缝地、迅速地扩张部署集群规模。&lt;/p&gt;
+&lt;p&gt;当然不是所有问题都是搜索问题，Elasticsearch的速度和弹性可以提供处理数据的广泛用例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为app或者网站增加一个搜索框&lt;/li&gt;
+&lt;li&gt;存储分析日志，指标和安全事件数据&lt;/li&gt;
+&lt;li&gt;机器学习实时地自动建立数据行为模型&lt;/li&gt;
+&lt;li&gt;在商业的自动化工作流中使用Elasticsearch作为存储引擎&lt;/li&gt;
+&lt;li&gt;使用Elasticsearch作为地理信息系统（GIS）管理，聚集，分析空间信息&lt;/li&gt;
+&lt;li&gt;使用Elasticsearch作为生物信息搜索工具存储和处理基因数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数据传入-document和indices&#34;&gt;数据传入： document和indices&lt;/h2&gt;
+&lt;p&gt;Elasticsearch是分布式地对document的存储。Elasticsearch将复杂的数据结构序列化为JSON格式的document并进行存储，而不是像常见的数据一样一行行地存储列数据。将大量Elasticsearch节点在集群中部署后，存储的document分布在集群中，就可以通过任意的节点迅速地访问到。&lt;/p&gt;
+&lt;p&gt;document存储后被索引，并且可以接近实时地查询到。Elasticsearch使用一个叫做倒排索引（inverted index）的数据结构来支持快速的全文检索。倒排索引可以列出全部document里面的所有独立word，然后标出这些word在文档出现的所有位置。&lt;/p&gt;
+&lt;p&gt;一个索引可以认为是优化的document集合，每个document是field的集合，field是包含数据的键值对儿。通常，Elasticsearch通过每个field（字段）索引到所有数据，每个索引的field都有专用的、优化的数据结构。例如，文本field存储在倒排索引里，数字和地理field存储在BKD树中。维护这些数据结构并从中取得数据是Elasticsearch搜索如此迅速的原因。&lt;/p&gt;
+&lt;p&gt;Elasticsearch还有一个无需模式的能力，意味着document可以被索引到，但是不需要明确地指定如何处理document中每个不同field。动态mapping启用之后，Elasticsearch自动检测并添加新的field到索引里面。这可以更容易地索引数据，只要开始索引document，Elasticsearch就会检测并map各种类型的数据到适合的Elasticsearch数据类型。&lt;/p&gt;
+&lt;p&gt;你可以定义规则控制动态mapping并定义mapping来完全掌握怎么存储和检索field。&lt;/p&gt;
+&lt;p&gt;定义自己的mapping可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;区分全文字符string field和特定的值string field&lt;/li&gt;
+&lt;li&gt;运行特定语言的文本分析&lt;/li&gt;
+&lt;li&gt;优化field的局部匹配&lt;/li&gt;
+&lt;li&gt;自定义日期格式&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;geo_point&lt;/code&gt;和&lt;code&gt;geo_shape&lt;/code&gt;这样的不能自动检测的数据类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通常会为不同的目的对同一字段建立不同的索引。例如，既希望把string field索引为文本field用来全文搜索，也想作为关键字field来排序或聚集数据。或者，可能选择使用多个语言分析器来处理包含用户输入的string field的内容。&lt;/p&gt;
+&lt;p&gt;在索引期间应用于全文字段的分析链，也会在搜索时使用。查询全文字段时，在索引中查找到term之前，就可以查询文本进行相同的分析。&lt;/p&gt;
+&lt;h2 id=&#34;信息输出搜索和分析&#34;&gt;信息输出：搜索和分析&lt;/h2&gt;
+&lt;p&gt;用Elasticsearch作为document存储，并且用来取出document和它们的metadata，强大的能力来源于能够运用Apache Lucene 搜索引擎库的全部能力。&lt;/p&gt;
+&lt;p&gt;Elasticsearch提供简单一致的REST API来管理集群，索引和搜索数据。在测试中，你可以通过命令行或者Kibana的开发控制栏，方便地直接提交请求。来自应用的请求，可以选择对应语言的&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/client/index.html&#34;&gt;Elasticseach client&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;搜索数据&#34;&gt;搜索数据&lt;/h3&gt;
+&lt;p&gt;Elasticsearch REST API 支持结构化查询和全文搜索，以及这两种结合的复杂查询。结构化查询类似于SQL语句可以构建的查询。例如，查找&lt;code&gt;employee&lt;/code&gt;的索引中的&lt;code&gt;gender&lt;/code&gt;和&lt;code&gt;age&lt;/code&gt;两个字段，查询结果以&lt;code&gt;hire_date&lt;/code&gt;字段排序。全文查询寻找所有匹配字符串的document，返回结果按照相关度（&lt;em&gt;relevavance&lt;/em&gt;）进行排序。相关度评估了搜索term与document的匹配程度。&lt;/p&gt;
+&lt;p&gt;还有查询单独的term，可以进行短语搜索，相似度搜索，和前缀搜索，并且自动获得搜索建议。&lt;/p&gt;
+&lt;p&gt;地理空间的和其他数字类型的数据查询？Elasticseach以优化的数据结构来索引非文本的数据，支持高性能的地理和数据类型查询。&lt;/p&gt;
+&lt;p&gt;使用ELasticsearch的JSON风格的查询语言（&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#34;&gt;Query DSL&lt;/a&gt;）实现这些查询能力。也可以构建&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-overview.html&#34;&gt;SQL查询语句&lt;/a&gt;来自然地搜索、聚集数据，JDBC和ODBC驱动允许广泛的第三方应用通过SQL连接Elasticsearch。&lt;/p&gt;
+&lt;h3 id=&#34;分析数据&#34;&gt;分析数据&lt;/h3&gt;
+&lt;p&gt;Elasticsearch的aggregation允许对数据建立复杂的summary，获得关键指标，模式和趋势的洞见（insight）。不只是找到谚语“大海捞针”，aggregation允许回答像这样的一些问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;海洋有多少针？&lt;/li&gt;
+&lt;li&gt;针的平均长度？&lt;/li&gt;
+&lt;li&gt;针长度的中位数是多少，由制造商区分&lt;/li&gt;
+&lt;li&gt;过去六个月大海里面有多少针掉进去了？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也可以用一些aggregation回答更细致的问题，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最受欢迎的针的生产生是哪家？&lt;/li&gt;
+&lt;li&gt;有哪些是不正常的针？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为aggregation使用和搜索一样的数据结构，所以处理速度也非常快。这就可以实时地分析，可视化数据。报告和dashboard和数据变化同步更新，所以可以基于最新的信息采取行动。&lt;/p&gt;
+&lt;p&gt;aggregation操作由搜索请求决定。可以在一个单独的请求中针对数据，同时搜索docuemnt，filter结果，数据分析。aggregation在特定的查询上下文中计算，显示的针的计数符合用户查询的标准，比如，所有为不锈钢材质的针的数量。&lt;/p&gt;
+&lt;h2 id=&#34;规模化和还原能力集群节点和分片&#34;&gt;规模化和还原能力：集群，节点和分片&lt;/h2&gt;
+&lt;p&gt;Elasticsearch可以按需规模化。可以添加服务器（节点）到集群增加空间。Elasticsearch可以自然地在所有节点中分布数据和进行查询。&lt;/p&gt;
+&lt;p&gt;Elasticsearch索引是在物理分片（shard）上面的逻辑组织。每一个分片事实上是独立的索引。把一个索引上的所有document分布在不同的分片，把分片分布在不同的节点，Elasticsearch可以保证冗余，来避免硬件挂掉带来的问题，并且提高查询性能。集群扩容之后，Elasticsearch自动地迁移分片来重新在集群中取得平衡。&lt;/p&gt;
+&lt;p&gt;有两种分片：基础的和副本的。每个索引的document属于一个基础的分片，一个副本分片是基础分片的复制。副本分片提供数据的冗余备份对抗硬件错误，提高可用性。&lt;/p&gt;
+&lt;p&gt;索引建立后基础分片的数量就定下来了，副本分片的数量任何时候都能改变，不会影响索引和查询。&lt;/p&gt;
+&lt;h3 id=&#34;分片的影响&#34;&gt;分片的影响&lt;/h3&gt;
+&lt;p&gt;对于索引的分片的大小和基础分片的数量设置，有一些对于性能的考量和权衡。分片越多，维护这些索引的日常开支就越多。分片越大，在Elasticsearch需要在集群重新均衡的时候需要用来移动分片的时间就越长。&lt;/p&gt;
+&lt;p&gt;查询大量小的分片，每个分片处理的速度快，但是更多的查询意味着更多的日常开销。所以查询大量小的分片可能更快，但是往往有其他方面的因素牵制。&lt;/p&gt;
+&lt;p&gt;起步：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保持平均分片大小在GB到几十GB。时间相关的数据情况下，通常分片在20GB到40GB区间。&lt;/li&gt;
+&lt;li&gt;避免庞大的碎片问题。一个节点可以维持的分片数量和可以访问的堆空间成正比。通常，堆空间每1GB的分片数量应该小于20。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;决定配置的最好的方法是&lt;a href=&#34;https://www.elastic.co/cn/elasticon/conf/2016/sf/quantitative-cluster-sizing&#34;&gt;测试数据和查询&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;灾难情况&#34;&gt;灾难情况&lt;/h3&gt;
+&lt;p&gt;由于性能原因，一个集群的节点是同一个网络的。在不同的数据中心平衡分片花太多时间。但是高可用的架构需要避免把鸡蛋放在一个篮子里。在一个地方的大断电事件中，另一个地方的服务器可以无缝地解决这个问题。答案是跨集群副本（ Cross-cluster replication，CCR）。&lt;/p&gt;
+&lt;p&gt;CCR提供从主集群到次要的远程集群自动同步索引的技术，依此进行热备份。也可以用CCR创建第二个集群来给用户提供地理上接近的读请求服务。&lt;/p&gt;
+&lt;p&gt;CCR是主动-被动的。基础集群的索引是主动的leader index，处理所有写请求。复制到副集群的索引是只读的follower。&lt;/p&gt;
+&lt;h3 id=&#34;维护&#34;&gt;维护&lt;/h3&gt;
+&lt;p&gt;Elasticsearch集成的安全、监控和管理特性允许你使用&lt;a href=&#34;https://www.elastic.co/guide/en/kibana/7.6/introduction.html&#34;&gt;Kibana&lt;/a&gt;作为控制中心管理集群。像&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/current/rollup-overview.html&#34;&gt;data rollups&lt;/a&gt;和&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html&#34;&gt;index生命周期管理&lt;/a&gt;的特性帮助长时间地管理数据。&lt;/p&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html&#34;&gt;Elasticsearch introduction&lt;/a&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://sutrahsing.github.io/posts/">posts</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://sutrahsing.github.io/posts/study/">study</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/elastic-stack/">Elastic Stack</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://sutrahsing.github.io/tags/elasticsearch/">Elasticsearch</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>

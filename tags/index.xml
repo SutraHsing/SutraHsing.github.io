@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Sutra Hsing</title>
+    <link>https://sutrahsing.github.io/tags/</link>
+    <description>Recent content in Tags on Sutra Hsing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>sutrahsing@163.com (sutra hsing)</managingEditor>
+    <webMaster>sutrahsing@163.com (sutra hsing)</webMaster>
+    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sutrahsing.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>blog</title>
+      <link>https://sutrahsing.github.io/tags/blog/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      <author>sutrahsing@163.com (sutra hsing)</author>
+      <guid>https://sutrahsing.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://sutrahsing.github.io/tags/github/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      <author>sutrahsing@163.com (sutra hsing)</author>
+      <guid>https://sutrahsing.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://sutrahsing.github.io/tags/hugo/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      <author>sutrahsing@163.com (sutra hsing)</author>
+      <guid>https://sutrahsing.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beats</title>
+      <link>https://sutrahsing.github.io/tags/beats/</link>
+      <pubDate>Mon, 22 Jun 2020 23:11:04 +0800</pubDate>
+      <author>sutrahsing@163.com (sutra hsing)</author>
+      <guid>https://sutrahsing.github.io/tags/beats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elastic Stack</title>
+      <link>https://sutrahsing.github.io/tags/elastic-stack/</link>
+      <pubDate>Mon, 22 Jun 2020 23:11:04 +0800</pubDate>
+      <author>sutrahsing@163.com (sutra hsing)</author>
+      <guid>https://sutrahsing.github.io/tags/elastic-stack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metricbeat</title>
+      <link>https://sutrahsing.github.io/tags/metricbeat/</link>
+      <pubDate>Mon, 22 Jun 2020 23:11:04 +0800</pubDate>
+      <author>sutrahsing@163.com (sutra hsing)</author>
+      <guid>https://sutrahsing.github.io/tags/metricbeat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch</title>
+      <link>https://sutrahsing.github.io/tags/elasticsearch/</link>
+      <pubDate>Mon, 13 Apr 2020 21:27:49 +0800</pubDate>
+      <author>sutrahsing@163.com (sutra hsing)</author>
+      <guid>https://sutrahsing.github.io/tags/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

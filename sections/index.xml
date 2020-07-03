@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sections on Sutra Hsing</title>
+    <link>https://sutrahsing.github.io/sections/</link>
+    <description>Recent content in Sections on Sutra Hsing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>sutrahsing@163.com (sutra hsing)</managingEditor>
+    <webMaster>sutrahsing@163.com (sutra hsing)</webMaster>
+    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+    
+	<atom:link href="https://sutrahsing.github.io/sections/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
