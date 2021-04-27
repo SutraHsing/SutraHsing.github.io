@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Sutra Hsing</title>
     <subtitle type="html">A Gopher Studying Distributed Relational Databases</subtitle>
-    <updated>2020-07-03T22:08:47&#43;08:00</updated>
+    <updated>2021-04-27T23:33:17&#43;08:00</updated>
     <id>https://sutrahsing.github.io/</id>
     <link rel="alternate" type="text/html" href="https://sutrahsing.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://sutrahsing.github.io/atom.xml" />
@@ -16,6 +16,177 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.66.0">Hugo</generator>
+        <entry>
+            <title type="text">口令和认证</title>
+            <link rel="alternate" type="text/html" href="https://sutrahsing.github.io/posts/study/password-and-authentication/" />
+            <id>https://sutrahsing.github.io/posts/study/password-and-authentication/</id>
+            <updated>2021-04-27T23:26:49&#43;08:00</updated>
+            <published>2021-02-01T23:22:28&#43;08:00</published>
+            <author>
+                    <name>sutra hsing</name>
+                    <uri>https://sutrahsing.github.io/</uri>
+                    <email>sutrahsing@163.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">认证 认证的要点是为用户提供一些凭证，比如用户名和口令，然后在用户访问应用的时候验证他……</summary>
+            
+                <content type="html">&lt;h1 id=&#34;认证&#34;&gt;认证&lt;/h1&gt;
+&lt;p&gt;认证的要点是为用户提供一些凭证，比如用户名和口令，然后在用户访问应用的时候验证他们提供了正确的凭证。那么我们需要用一些办法在数据库中保存好这些凭证。但是在服务端保存用于验证的口令不是一件容易的事情。&lt;/p&gt;
+&lt;h2 id=&#34;存储口令&#34;&gt;存储口令&lt;/h2&gt;
+&lt;p&gt;最简单的方法就是在数据库中创建一个表，保存用户名和对应的口令。用户登录的时候，服务器从用户得到一个验证请求，其中包含用户名和口令。通过比较来确定是否允许用户访问应用。&lt;/p&gt;
+&lt;p&gt;这个模型中的安全强度和弹性取决于口令时怎么存储的。最基础的，最不安全的，就是用明文格式存储口令。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://denimgroup.com/resources/blog/2007/10/cleartext-vs-pl/&#34;&gt;Denim团队的Dan Cornell&lt;/a&gt;解释，明文就是明确可读的传输数据或者存储数据，比如未加密的信息。另一个术语是纯文本（plain text）。根据Cornell所述，纯文本可以用来作为加密算法的输入，因为纯文本是无格式的文本。&lt;/p&gt;
+&lt;h2 id=&#34;哈希&#34;&gt;哈希&lt;/h2&gt;
+&lt;p&gt;加密领域，哈希算法是一种数学算法，把任意大小的数据映射到固定大小的字符串。我们可以将函数输入称为&lt;strong&gt;消息&lt;/strong&gt;（message）或简称为输入。固定大小的字符串函数输出称为&lt;strong&gt;哈希&lt;/strong&gt;或*&lt;strong&gt;消息摘要&lt;/strong&gt;。&lt;a href=&#34;https://www.owasp.org/index.php/Guide_to_Cryptography#Hashes&#34;&gt;OWASP&lt;/a&gt;所述，加密中使用的哈希函数具有以下关键属性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计算散列很容易且实用，但是“如果只知道散列值，很难或不可能重新生成输入”。&lt;/li&gt;
+&lt;li&gt;生成一个匹配的输出所需要的输入值很难。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以和加密算法（encryption）不同的是，通过哈希函数得到的值不能解密。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.auth0.com/blog/hashing-one-way-road-to-security/encryption-flow.png&#34; alt=&#34;Encryption and decryption flow example - two-way&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.auth0.com/blog/hashing-one-way-road-to-security/hash-flow.png&#34; alt=&#34;Hashing algorithm flow example - one-way&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;攻击口令&#34;&gt;攻击口令&lt;/h2&gt;
+&lt;p&gt;有两种主要的攻击方式是我们需要关注的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;字典攻击&lt;/li&gt;
+&lt;li&gt;暴力攻击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;它们的工作原理很简单：用一个预生成的口令哈希表，通过简单的比较就可以找到相同的哈希值，可以生成这个哈希的口令就是你要找的。对于不用盐的口令，有很多口令和预生成的列表可以下载。下载之后只需要进行很简单的搜索就能破解。这样的列表就是我们所说的彩虹表。&lt;/p&gt;
+&lt;p&gt;如果使用了盐，但并不是每个口令生成一个盐，攻击者要做的就是用这个盐手动生成一个彩虹表用来搜索。但是，如果你给每个口令生成一个独立的盐，那么攻击者需要给每个口令配上单独的盐生成一个列表。这是就另一种攻击方式，暴力攻击。&lt;/p&gt;
+&lt;p&gt;暴力攻击通过一次又一次地猜测口令来达成目的。和慢哈希（bcrypt, scrypt, pgkdf2）不同的是，MD5或者SHA族（SHA-1, SHA-256, SHA-512等）是消息摘要算法，可以用来快速地确认一个消息有没有被修改过。&lt;/p&gt;
+&lt;p&gt;最常见的用途是确认下载文件。从网络上下载文件后，在文件上运行MD5，就可以和站点上提供的哈希值进行比较，验证下载文件是否被篡改。&lt;/p&gt;
+&lt;p&gt;这里的关键词是快速，但是快速是安全的敌人，因为要面对暴力破解。这些算法都不是为口令设计的。虽然我们希望让应用尽可能运行得快一些，但是在这里我们刻意地希望慢一些。&lt;/p&gt;
+&lt;p&gt;使用bcrypt，可以让计算哈希值的速度能慢一些。这就是我们说的密钥延伸（key streching）。这样一来，能保证对于攻击者来说暴力破解的代价变得足够高，可能是时间上需要更长或者在相同事件下需要更高的算力的设备破解。&lt;/p&gt;
+&lt;h2 id=&#34;哈希速度比较&#34;&gt;哈希速度比较&lt;/h2&gt;
+&lt;p&gt;在2012年的大会上，Jeremi M. Gosney用商业级的硬件来比较不同哈希算法的性能。配置了五个服务器，有18个消费者级别的显卡：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;10x HD 7970&lt;/li&gt;
+&lt;li&gt;4x HD 5970(双GPU)&lt;/li&gt;
+&lt;li&gt;3x HD 6990（双GPU）&lt;/li&gt;
+&lt;li&gt;1x HD 5870&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结论如下&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Algorithm&lt;/th&gt;
+&lt;th&gt;Hashes/Second&lt;/th&gt;
+&lt;th&gt;MD5&lt;/th&gt;
+&lt;th&gt;SHA-1&lt;/th&gt;
+&lt;th&gt;SHA-512&lt;/th&gt;
+&lt;th&gt;Bcrypt&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;MD5&lt;/td&gt;
+&lt;td&gt;180 Billion/second&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;65% Faster&lt;/td&gt;
+&lt;td&gt;99.9997% Faster&lt;/td&gt;
+&lt;td&gt;99.9999996% Faster&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SHA-1&lt;/td&gt;
+&lt;td&gt;63 Billion/second&lt;/td&gt;
+&lt;td&gt;185% Slower&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;99.9994% Faster&lt;/td&gt;
+&lt;td&gt;99.999887% Faster&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SHA-512&lt;/td&gt;
+&lt;td&gt;364,000/second&lt;/td&gt;
+&lt;td&gt;49.5M% Slower&lt;/td&gt;
+&lt;td&gt;17.3M% Slower&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;80.49% Faster&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bcrypt&lt;/td&gt;
+&lt;td&gt;71,000/second&lt;/td&gt;
+&lt;td&gt;253.5M% Slower&lt;/td&gt;
+&lt;td&gt;88.7M% Slower&lt;/td&gt;
+&lt;td&gt;412% Slower&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;这些年硬件性能不断提高，我们可预期的是，在相同级别的设备上，现在会有一个大幅的时间开销降低，大概2-4倍的性能提升。&lt;/p&gt;
+&lt;p&gt;如果还用未加盐的或者是使用唯一盐值的MD5加密口令，攻击者使用这样的配置每秒可以进行&lt;em&gt;180,000,000,000&lt;/em&gt;次猜测。即使是最好的SHA算法SHA-512，比MD5慢49,000,000倍，每秒也可以猜364,000次。&lt;/p&gt;
+&lt;p&gt;但是如果用bcrypt，并且配置开销因子为5，那么每秒只能有71,000次猜测。比MD5慢253,500,000%倍，比SHA-1慢88,700,000%倍，比SHA-512还要慢412%倍，相当于其速度的5.12倍。&lt;/p&gt;
+&lt;p&gt;很多开发者希望仅仅通过迭代五次执行MD5来减慢暴力攻击。但是也只能把攻击的次数降低到每秒36,000,000,000，相当于单次SHA-1的两倍慢的速度，也还是比SHA-512快99.99898%，比bcrypt慢443,000,000%倍。&lt;/p&gt;
+&lt;p&gt;bcrypt是非常棒的哈希口令方案，可以有效对抗暴力破解和字典攻击。&lt;/p&gt;
+&lt;h2 id=&#34;bcrypt哈希结构&#34;&gt;bcrypt哈希结构&lt;/h2&gt;
+&lt;p&gt;哈希值包含几个部分。这些部分可以让你了解如何生成的这个哈希值，不需要额外的信息来做验证。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.engineyard.com/hs-fs/hubfs/hash-anatomy.png?width=920&amp;amp;name=hash-anatomy.png&#34; alt=&#34;hash-anatomy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;前缀&lt;code&gt;$2a$&lt;/code&gt;标识了该哈希使用bcrypt算法及具体版本。&lt;/p&gt;
+&lt;p&gt;cost是哈希计算的迭代次数，盐值，最后是哈希后的文本。&lt;/p&gt;
+&lt;p&gt;2011年6月的1.1版本crypt_blowfish发布，修复了处理非ASCII字符会导致的不安全口令问题。为了分别潜在的问题，已知的问题和正确的哈希，引入了两个前缀。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$2a$ - 潜在的问题&lt;/li&gt;
+&lt;li&gt;$2x$ - 已知的问题哈希&lt;/li&gt;
+&lt;li&gt;$2y$ - 正确的版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为ruby没有这个问题，只支持$2a$前缀和$2x$前缀兼容。&lt;/p&gt;
+&lt;p&gt;PHP支持三个前面。&lt;/p&gt;
+&lt;h2 id=&#34;双因子认证&#34;&gt;双因子认证&lt;/h2&gt;
+&lt;p&gt;即使你使用了bcrypt来存储口令，也同样应该用双因子认证（two-factor authentication, 2FA）协作增强安全性。&lt;/p&gt;
+&lt;p&gt;双因子认证在口令的基础上引入第二种认证。口令是用户所知道的，第二个认证机制可以是用户所拥有的或者用户是什么。比如用户所有的一个设备，其令牌值随着时间而变化，或者用户的生物特征信息。生物特征在网络应用中还不经常使用，所以我们主要聚焦在基于时间的令牌。&lt;/p&gt;
+&lt;p&gt;通常，这是一个RSA安全ID类的设备，一个密钥环规格的工具，每30或60秒生成一个新的令牌给用户，用户输入这个值进行登录。这个令牌由一个共享的密钥生成，这个密钥只有这个设备和服务器知道。只要知道当前时间，服务器就可以计算出现在的令牌值。&lt;/p&gt;
+&lt;p&gt;通常，我们的一些选项，包括软口令（比如谷歌认证），手机应用推送消息（比如推特）和短信。这些方法都在确保用户掌握一些东西——手机或者令牌生成器。&lt;/p&gt;
+&lt;p&gt;应用开发人员应该为用户的信息安全负责。用SSL避免发送纯文本信息或者减少中间人攻击都是不够的。&lt;/p&gt;
+&lt;p&gt;在很多语言里面，用bcyrpt都非常简单，而且还能避免两种主要的攻击途径：字典攻击和暴力破解。&lt;/p&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://auth0.com/blog/hashing-passwords-one-way-road-to-security/&#34;&gt;Hashing Passwords: One-Way Road to Security&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.engineyard.com/password-security-part-1&#34;&gt;Password Security&lt;/a&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://sutrahsing.github.io/posts/" term="posts" label="posts" />
+                        
+                    
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://sutrahsing.github.io/posts/study/" term="study" label="study" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://sutrahsing.github.io/tags/encryption/" term="Encryption" label="Encryption" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://sutrahsing.github.io/tags/authentication/" term="Authentication" label="Authentication" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Never Truly Successsful</title>
             <link rel="alternate" type="text/html" href="https://sutrahsing.github.io/posts/interest/never-truly-successsful/" />
@@ -510,7 +681,7 @@ event.dataset：数据来源的module名&lt;/p&gt;
             <title type="text">Elasticsearch介绍</title>
             <link rel="alternate" type="text/html" href="https://sutrahsing.github.io/posts/study/elasticsearch-intro/" />
             <id>https://sutrahsing.github.io/posts/study/elasticsearch-intro/</id>
-            <updated>2020-06-29T21:29:07&#43;08:00</updated>
+            <updated>2020-07-04T13:55:51&#43;08:00</updated>
             <published>2020-04-13T21:27:49&#43;08:00</published>
             <author>
                     <name>sutra hsing</name>
@@ -536,7 +707,7 @@ event.dataset：数据来源的module名&lt;/p&gt;
 &lt;p&gt;document存储后被索引，并且可以接近实时地查询到。Elasticsearch使用一个叫做倒排索引（inverted index）的数据结构来支持快速的全文检索。倒排索引可以列出全部document里面的所有独立word，然后标出这些word在文档出现的所有位置。&lt;/p&gt;
 &lt;p&gt;一个索引可以认为是优化的document集合，每个document是field的集合，field是包含数据的键值对儿。通常，Elasticsearch通过每个field（字段）索引到所有数据，每个索引的field都有专用的、优化的数据结构。例如，文本field存储在倒排索引里，数字和地理field存储在BKD树中。维护这些数据结构并从中取得数据是Elasticsearch搜索如此迅速的原因。&lt;/p&gt;
 &lt;p&gt;Elasticsearch还有一个无需模式的能力，意味着document可以被索引到，但是不需要明确地指定如何处理document中每个不同field。动态mapping启用之后，Elasticsearch自动检测并添加新的field到索引里面。这可以更容易地索引数据，只要开始索引document，Elasticsearch就会检测并map各种类型的数据到适合的Elasticsearch数据类型。&lt;/p&gt;
-&lt;p&gt;你可以定义规则控制动态mapping并定义mapping来完全掌握怎么存储和检索field。&lt;/p&gt;
+&lt;p&gt;你可以定义一些规则来控制dynamic mapping也可以明确定义mapping来完全掌握怎么存储field，怎么索引field。&lt;/p&gt;
 &lt;p&gt;定义自己的mapping可以：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;区分全文字符string field和特定的值string field&lt;/li&gt;

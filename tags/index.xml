@@ -9,10 +9,28 @@
     <managingEditor>sutrahsing@163.com (sutra hsing)</managingEditor>
     <webMaster>sutrahsing@163.com (sutra hsing)</webMaster>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Feb 2021 23:22:28 +0800</lastBuildDate>
     
 	<atom:link href="https://sutrahsing.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Authentication</title>
+      <link>https://sutrahsing.github.io/tags/authentication/</link>
+      <pubDate>Mon, 01 Feb 2021 23:22:28 +0800</pubDate>
+      <author>sutrahsing@163.com (sutra hsing)</author>
+      <guid>https://sutrahsing.github.io/tags/authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Encryption</title>
+      <link>https://sutrahsing.github.io/tags/encryption/</link>
+      <pubDate>Mon, 01 Feb 2021 23:22:28 +0800</pubDate>
+      <author>sutrahsing@163.com (sutra hsing)</author>
+      <guid>https://sutrahsing.github.io/tags/encryption/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>blog</title>
