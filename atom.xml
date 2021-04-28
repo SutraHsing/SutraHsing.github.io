@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Sutra Hsing</title>
     <subtitle type="html">A Gopher Studying Distributed Relational Databases</subtitle>
-    <updated>2021-04-28T08:42:28&#43;08:00</updated>
+    <updated>2021-04-28T19:52:47&#43;08:00</updated>
     <id>https://sutrahsing.github.io/</id>
     <link rel="alternate" type="text/html" href="https://sutrahsing.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://sutrahsing.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">Designing and Authentication System</title>
             <link rel="alternate" type="text/html" href="https://sutrahsing.github.io/posts/study/designing-and-authentication-system/" />
             <id>https://sutrahsing.github.io/posts/study/designing-and-authentication-system/</id>
-            <updated>2021-04-28T08:25:18&#43;08:00</updated>
+            <updated>2021-03-13T00:00:00&#43;08:00</updated>
             <published>2021-03-13T00:00:00&#43;08:00</published>
             <author>
                     <name>sutra hsing</name>
@@ -345,14 +345,14 @@
             <title type="text">口令和认证</title>
             <link rel="alternate" type="text/html" href="https://sutrahsing.github.io/posts/study/password-and-authentication/" />
             <id>https://sutrahsing.github.io/posts/study/password-and-authentication/</id>
-            <updated>2021-04-28T08:10:00&#43;08:00</updated>
-            <published>2021-02-01T23:22:28&#43;08:00</published>
+            <updated>2021-02-01T00:00:00&#43;08:00</updated>
+            <published>2021-02-01T00:00:00&#43;08:00</published>
             <author>
                     <name>sutra hsing</name>
                     <uri>https://sutrahsing.github.io/</uri>
                     <email>sutrahsing@163.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">认证 认证的要点是为用户提供一些凭证，比如用户名和口令，然后在用户访问应用的时候验证他……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">认证的要点是为用户提供一些凭证，比如用户名和口令，然后在用户访问应用的时候验证他们提供了正确的凭证。那么我们需要用一些办法在数据库中保存好这些凭证。但是在服务端保存用于验证的口令不是一件容易的事情。</summary>
             
                 <content type="html">&lt;h1 id=&#34;认证&#34;&gt;认证&lt;/h1&gt;
 &lt;p&gt;认证的要点是为用户提供一些凭证，比如用户名和口令，然后在用户访问应用的时候验证他们提供了正确的凭证。那么我们需要用一些办法在数据库中保存好这些凭证。但是在服务端保存用于验证的口令不是一件容易的事情。&lt;/p&gt;
@@ -563,14 +563,14 @@
             <title type="text">现在就创建你的博客</title>
             <link rel="alternate" type="text/html" href="https://sutrahsing.github.io/posts/study/build-your-blog/" />
             <id>https://sutrahsing.github.io/posts/study/build-your-blog/</id>
-            <updated>2021-04-28T08:10:00&#43;08:00</updated>
-            <published>2020-06-27T00:00:00&#43;00:00</published>
+            <updated>2020-06-27T00:00:00&#43;08:00</updated>
+            <published>2020-06-27T00:00:00&#43;08:00</published>
             <author>
                     <name>sutra hsing</name>
                     <uri>https://sutrahsing.github.io/</uri>
                     <email>sutrahsing@163.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;你可能不止一次听人们说，应该建立一个自己的站点了。但是因为可能会涉及比较多维护工作，以及繁忙的工作而搁置下来。但是这不代表博客不重要。&lt;/p&gt;……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">你可能不止一次听人们说，应该建立一个自己的站点了。但是因为可能会涉及比较多维护工作，以及繁忙的工作而搁置下来。但是这不代表博客不重要。</summary>
             
                 <content type="html">&lt;p&gt;你可能不止一次听人们说，应该建立一个自己的站点了。但是因为可能会涉及比较多维护工作，以及繁忙的工作而搁置下来。但是这不代表博客不重要。&lt;/p&gt;
 &lt;p&gt;Hugo宣称是建立网站最快的框架，由GO语言编写，可以立即生成静态网站。&lt;/p&gt;
@@ -699,7 +699,8 @@ draft: true
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/rjy22WFcycTKDKNtrUbzqg&#34;&gt;是时候考虑搭建自己的站点了：Hugo 和 GitHub Pages 为你助力&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;hugo quick start&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content>
+&lt;/blockquote&gt;
+</content>
             
             
             
@@ -757,8 +758,8 @@ draft: true
             <title type="text">Filebeat怎么工作</title>
             <link rel="alternate" type="text/html" href="https://sutrahsing.github.io/posts/study/how-filebeat-works/" />
             <id>https://sutrahsing.github.io/posts/study/how-filebeat-works/</id>
-            <updated>2021-04-28T08:10:00&#43;08:00</updated>
-            <published>2020-06-22T23:11:04&#43;08:00</published>
+            <updated>2020-06-22T00:00:00&#43;08:00</updated>
+            <published>2020-06-22T00:00:00&#43;08:00</published>
             <author>
                     <name>sutra hsing</name>
                     <uri>https://sutrahsing.github.io/</uri>
@@ -867,14 +868,14 @@ draft: true
             <title type="text">Metricbeat怎么工作</title>
             <link rel="alternate" type="text/html" href="https://sutrahsing.github.io/posts/study/how-metricbeat-works/" />
             <id>https://sutrahsing.github.io/posts/study/how-metricbeat-works/</id>
-            <updated>2021-04-28T08:10:00&#43;08:00</updated>
-            <published>2020-06-15T00:00:00&#43;00:00</published>
+            <updated>2020-06-15T00:00:00&#43;08:00</updated>
+            <published>2020-06-15T00:00:00&#43;08:00</published>
             <author>
                     <name>sutra hsing</name>
                     <uri>https://sutrahsing.github.io/</uri>
                     <email>sutrahsing@163.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;Metricbeat包括module和metricset。module定义从特定的服务收集数据的基本逻辑，比如从Redis，MySQL等。module有关于服务的细节，包括如何连接，采集频率，从何处收集数据。&lt;/p&gt;……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Metricbeat包括module和metricset。module定义从特定的服务收集数据的基本逻辑，比如从Redis，MySQL等。module有关于服务的细节，包括如何连接，采集频率，从何处收集数据。</summary>
             
                 <content type="html">&lt;p&gt;Metricbeat包括module和metricset。module定义从特定的服务收集数据的基本逻辑，比如从Redis，MySQL等。module有关于服务的细节，包括如何连接，采集频率，从何处收集数据。&lt;/p&gt;
 &lt;p&gt;每个module有一个或多个metricset。metricset是module抓取、整理数据的部分。每一个指标不是分别收集的，metricset可以通过一个请求从远端系统获得一组相关的指标。比如Redis module提供info metricset从Redis收集信息和统计数据，通过执行INFO命令并解析返回结果。&lt;/p&gt;
@@ -948,7 +949,8 @@ event.dataset：数据来源的module名&lt;/p&gt;
 &lt;p&gt;每个事件可以包含多个指标。意味着可以发送一条请求给系统获得所有的指标，减少对主机系统的压力。如果直接发送指标到Elasticsearch作为输出，Elasticsearch可以直接以嵌套的JAON document的形式存储并查询指标。这使得发送指标数据到Elasticsearch变得非常高效。&lt;/p&gt;
 &lt;p&gt;因为所有的原事件数据都是可以访问的，Metricbeat或者Elasticsearch可以随后对数据做任意需要的变化。例如，如果需要以Metrics2.0格式存储数据，你可以把完整的事件拆分成多个metrics2.0事件。&lt;/p&gt;
 &lt;p&gt;每个指标的元信息存储在映射的模板里面。所有指标事件共有的元信息（比如主机和时间戳）都是事件结构的一部分，并且对于metricset的所有事件仅存储一次。&lt;/p&gt;
-&lt;p&gt;如果一个服务的一个指标看上去好像不存在，也因为在一个事件里有所有相关的指标而更容易查看。&lt;/p&gt;</content>
+&lt;p&gt;如果一个服务的一个指标看上去好像不存在，也因为在一个事件里有所有相关的指标而更容易查看。&lt;/p&gt;
+</content>
             
             
             

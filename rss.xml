@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 28 Apr 2021 08:42:28 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 28 Apr 2021 19:52:47 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://sutrahsing.github.io/rss.xml" />
         
@@ -354,7 +354,7 @@
                 <title>口令和认证</title>
                 <link>https://sutrahsing.github.io/posts/study/password-and-authentication/</link>
                 <guid isPermaLink="true">https://sutrahsing.github.io/posts/study/password-and-authentication/</guid>
-                <pubDate>Mon, 01 Feb 2021 23:22:28 &#43;0800</pubDate>
+                <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0800</pubDate>
                 
                     <author>sutrahsing@163.com (sutra hsing)</author>
                 
@@ -566,7 +566,7 @@
                 <title>现在就创建你的博客</title>
                 <link>https://sutrahsing.github.io/posts/study/build-your-blog/</link>
                 <guid isPermaLink="true">https://sutrahsing.github.io/posts/study/build-your-blog/</guid>
-                <pubDate>Sat, 27 Jun 2020 00:00:00 &#43;0000</pubDate>
+                <pubDate>Sat, 27 Jun 2020 00:00:00 &#43;0800</pubDate>
                 
                     <author>sutrahsing@163.com (sutra hsing)</author>
                 
@@ -699,7 +699,8 @@ draft: true
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/rjy22WFcycTKDKNtrUbzqg&#34;&gt;是时候考虑搭建自己的站点了：Hugo 和 GitHub Pages 为你助力&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;hugo quick start&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;
+</description>
                 
                 
                 
@@ -757,7 +758,7 @@ draft: true
                 <title>Filebeat怎么工作</title>
                 <link>https://sutrahsing.github.io/posts/study/how-filebeat-works/</link>
                 <guid isPermaLink="true">https://sutrahsing.github.io/posts/study/how-filebeat-works/</guid>
-                <pubDate>Mon, 22 Jun 2020 23:11:04 &#43;0800</pubDate>
+                <pubDate>Mon, 22 Jun 2020 00:00:00 &#43;0800</pubDate>
                 
                     <author>sutrahsing@163.com (sutra hsing)</author>
                 
@@ -864,7 +865,7 @@ draft: true
                 <title>Metricbeat怎么工作</title>
                 <link>https://sutrahsing.github.io/posts/study/how-metricbeat-works/</link>
                 <guid isPermaLink="true">https://sutrahsing.github.io/posts/study/how-metricbeat-works/</guid>
-                <pubDate>Mon, 15 Jun 2020 00:00:00 &#43;0000</pubDate>
+                <pubDate>Mon, 15 Jun 2020 00:00:00 &#43;0800</pubDate>
                 
                     <author>sutrahsing@163.com (sutra hsing)</author>
                 
@@ -942,7 +943,8 @@ event.dataset：数据来源的module名&lt;/p&gt;
 &lt;p&gt;每个事件可以包含多个指标。意味着可以发送一条请求给系统获得所有的指标，减少对主机系统的压力。如果直接发送指标到Elasticsearch作为输出，Elasticsearch可以直接以嵌套的JAON document的形式存储并查询指标。这使得发送指标数据到Elasticsearch变得非常高效。&lt;/p&gt;
 &lt;p&gt;因为所有的原事件数据都是可以访问的，Metricbeat或者Elasticsearch可以随后对数据做任意需要的变化。例如，如果需要以Metrics2.0格式存储数据，你可以把完整的事件拆分成多个metrics2.0事件。&lt;/p&gt;
 &lt;p&gt;每个指标的元信息存储在映射的模板里面。所有指标事件共有的元信息（比如主机和时间戳）都是事件结构的一部分，并且对于metricset的所有事件仅存储一次。&lt;/p&gt;
-&lt;p&gt;如果一个服务的一个指标看上去好像不存在，也因为在一个事件里有所有相关的指标而更容易查看。&lt;/p&gt;</description>
+&lt;p&gt;如果一个服务的一个指标看上去好像不存在，也因为在一个事件里有所有相关的指标而更容易查看。&lt;/p&gt;
+</description>
                 
                 
                 
